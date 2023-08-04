@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <marquee behavior="" direction="reght" class="bg-info p-3 text-white mb-4 text-uppercase">all countries details</marquee>
+<div class="col-md-4 mb-3" *ngFor="let s of countryArray; index as i">
+    <div class="card ">
+        <div class="card-header text-uppercase text-center"
+        [ngClass]="{
+            'bg-primary' : (i+1) % 2 ===0,
+            'text-white'  :(i+1) % 2 ===0,
+            'bg-success'  : (i+1)  % 2 !==0
+            
+
+            
+        }"
+        >
+           country - {{s.name}}
+        </div>
+        <div class="card-body text-capitalize"
+      
+        >
+            <img [src]="countryArray[i].flag" alt="flag" class="img-fluid">
+            <ul class="list-group">
+                <li class="list-group-item">prime-minister- {{s.pm}}</li>
+                <li class="list-group-item">capital- {{s.capital}}</li>
+                <li class="list-group-item">currency- {{s.currency}}</li>
+
+
+
+            </ul>
+        </div>
+        <div class="card-footer">
+            <li class="list-group-item"> popolation- {{s.popolation}}</li>
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>
