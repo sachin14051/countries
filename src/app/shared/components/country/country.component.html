@@ -28,8 +28,17 @@
 
             </ul>
         </div>
-        <div class="card-footer">
-            <li class="list-group-item"> popolation- {{s.popolation}}</li>
+        <div class="card-footer" 
+       
+        >
+            <li class="list-group-item"
+            [ngClass]="{
+                'bg-info' : (i+1)%2===0,
+                'text-white' :(i+1)%2!==0,
+                'bg-warning' :(i+1) % 2!==0
+               
+            }"
+            > popolation- {{s.popolation}}</li>
 
         </div>
     </div>
